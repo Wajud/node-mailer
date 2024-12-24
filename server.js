@@ -36,9 +36,9 @@ function register({
     const mail_config = {
       from: email,
       to: "popoolarahmat96@gmail.com",
-      subject: "New User Registration",
+      subject: "2025 Bi-Annual Conference Participant Registration Form",
       html: `
-      <h1>New Registration</h1>
+      <h1>2025 Bi-Annual Conference Participant Registration Form</h1>
       <br/> 
       <p>Name </p>
       <p>${fullName}</p>
