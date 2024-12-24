@@ -16,7 +16,14 @@ app.use((req, res, next) => {
 });
 
 //register function
-function register({ fullName, email, phoneNumber }) {
+function register({
+  fullName,
+  address,
+  telephone,
+  email,
+  stateOfResidence,
+  dateOfArrival,
+}) {
   return new Promise((resolve, reject) => {
     var transporter = nodemailer.createTransport({
       service: "gmail",
@@ -28,22 +35,29 @@ function register({ fullName, email, phoneNumber }) {
 
     const mail_config = {
       from: email,
-      to: "kareemwajud@yahoo.com",
+      to: "popoolarahmat96@gmail.com",
       subject: "New User Registration",
       html: `
-      <h1>Mew Registration</h1>
+      <h1>New Registration</h1>
       <br/> 
       <p>Name </p>
-      <br/>
       <p>${fullName}</p>
       <br/> 
       <p>Email </p>
-      <br/>
       <p>${email}</p>
-      <br/> <br/>
-      <p>Phone Number </p>
+      <br/> 
+      <p>Telephone </p>
+      <p>${telephone}</p>
       <br/>
-      <p>${phoneNumber}</p>
+      <p>Address </p>
+      <p>${address}</p>
+      <br />
+      <p>State of Residence </p>
+      <p>${stateOfResidence}</p>
+      <br/>
+      <p>Date of Arrival </p>
+      <p>${dateOfArrival}</p>
+      <br/>
       `,
     };
 
@@ -72,24 +86,21 @@ function sendMessage({ name, email, phoneNumber, message }) {
 
     const mail_config = {
       from: email,
-      to: "kareemwajud@yahoo.com",
+      to: "popoolarahmat96@gmail.com",
       subject: `New Message from ${email}`,
       html: `
-       <h1>Mew Registration</h1>
+       <h1>New Message from ${email}</h1>
        <br/> 
        <p>Name </p>
-       <br/>
        <p>${name}</p>
        <br/> 
        <p>Email </p>
-       <br/>
        <p>${email}</p>
-       <br/> <br/>
+       <br/> 
        <p>Phone Number </p>
-       <br/>
        <p>${phoneNumber}</p>
-       <p>Message </p>
        <br/>
+       <p>Message </p>
        <p>${message}</p>
        `,
     };
