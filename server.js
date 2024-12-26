@@ -35,7 +35,7 @@ function register({
 
     const mail_config = {
       from: email,
-      to: "popoolarahmat96@gmail.com",
+      to: "fctpfn@gmail.com",
       subject: "2025 Bi-Annual Conference Participant Registration Form",
       html: `
       <h1>2025 Bi-Annual Conference Participant Registration Form</h1>
@@ -86,7 +86,7 @@ function sendMessage({ name, email, phoneNumber, message }) {
 
     const mail_config = {
       from: email,
-      to: "popoolarahmat96@gmail.com",
+      to: "fctpfn@gmail.com",
       subject: `New Message from ${email}`,
       html: `
        <h1>New Message from ${email}</h1>
